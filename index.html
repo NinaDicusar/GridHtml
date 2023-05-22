@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid css</title>
+    <style>
+       
+        body{
+            height: 100vh;
+            overflow: hidden;
+        }
+       #content{
+            border: 5px solid #666;
+            height: calc(100vh - 16px - 10px );
+        }
+        #content h1{
+            margin: 0;
+        }
+#content h1, 
+#content form,
+#content a{
+    border: 3px solid red;
+}
+
+
+    /*GRID */
+#content{
+    display: grid;
+
+    grid-template-columns:10% 80% 10%;
+    grid-template-rows:10% 80% 10%;
+}
+#content form{
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+#content a{
+    grid-row-start: 3;
+    grid-column-start: 3;
+}
+
+
+</style>
+</head>
+<body>
+    <section id="content">
+<h1>LOGO</h1>
+
+<form action="">
+<input type="text" placeholder="your email">
+<button>SUBSCRIBE</button>
+</form>
+<a href="#">CHAT</a>
+    </section>
+    
+</body>
+</html>
